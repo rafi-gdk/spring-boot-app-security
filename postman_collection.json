@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "5254fc69-2452-457e-bebb-098541efba9c",
+		"name": "customer-service-security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Negitive",
+			"item": [
+				{
+					"name": "addCustomer-Invalid Name",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "rafi",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"customerId\": \"12345678\",\r\n\t\"customerName\": \"ddd\",\r\n\t\"customerDOB\": \"2015-01-09\",\r\n\t\"phoneNumber\": 1234567899,\r\n\t\"email\": \"s.s@gmail.com\",\r\n\t\"password\": \"12345678\",\r\n\t\"addresses\": [\r\n\t\t{\r\n\t\t\t\"addressType\": \"Permanent\",\r\n\t\t\t\"flatNumber\": \"101\",\r\n\t\t\t\"plotNumber\": \"102\",\r\n\t\t\t\"buildingName\": \"31\",\r\n\t\t\t\"roadNumber\": 124578,\r\n\t\t\t\"street\": \"ss\",\r\n\t\t\t\"city\": \"Telangana\",\r\n\t\t\t\"country\": \"India\",\r\n\t\t\t\"pinCode\": 500036\r\n\t\t}    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1001/customer-service/customer/addCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"customer-service",
+								"customer",
+								"addCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCustomer-Invalid Phone Number",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "rafi",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"customerId\": \"12345678\",\r\n\t\"customerName\": \"SonuNigum\",\r\n\t\"customerDOB\": \"2015-01-09\",\r\n\t\"phoneNumber\": 444,\r\n\t\"email\": \"s.s@gmail.com\",\r\n\t\"password\": \"12345678\",\r\n\t\"addresses\": [\r\n\t\t{\r\n\t\t\t\"addressType\": \"Permanent\",\r\n\t\t\t\"flatNumber\": \"101\",\r\n\t\t\t\"plotNumber\": \"102\",\r\n\t\t\t\"buildingName\": \"31\",\r\n\t\t\t\"roadNumber\": 124578,\r\n\t\t\t\"street\": \"ss\",\r\n\t\t\t\"city\": \"Telangana\",\r\n\t\t\t\"country\": \"India\",\r\n\t\t\t\"pinCode\": 500036\r\n\t\t}    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1001/customer-service/customer/addCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"customer-service",
+								"customer",
+								"addCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCustomer-Invalid Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "rafi",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"customerId\": \"12345678910\",\r\n\t\"customerName\": \"SonuN\",\r\n\t\"customerDOB\": \"2015-01-09\",\r\n\t\"phoneNumber\": 444,\r\n\t\"email\": \"hhgmail.com\",\r\n\t\"password\": \"12345678\",\r\n\t\"addresses\": [\r\n\t\t{\r\n\t\t\t\"addressType\": \"Permanent\",\r\n\t\t\t\"flatNumber\": \"101\",\r\n\t\t\t\"plotNumber\": \"102\",\r\n\t\t\t\"buildingName\": \"31\",\r\n\t\t\t\"roadNumber\": 124578,\r\n\t\t\t\"street\": \"ss\",\r\n\t\t\t\"city\": \"Telangana\",\r\n\t\t\t\"country\": \"India\",\r\n\t\t\t\"pinCode\": 500036\r\n\t\t}    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1001/customer-service/customer/addCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"customer-service",
+								"customer",
+								"addCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1001/customer-service/customer/getCustomer/75378945",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"customer-service",
+								"customer",
+								"getCustomer",
+								"75378945"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"customerId\": \"12345675\",\r\n\t\"customerName\": \"SonuNigum\",\r\n\t\"customerDOB\": \"2015-01-09\",\r\n\t\"phoneNumber\": 1234567899,\r\n\t\"email\": \"s.s@gmail.com\",\r\n\t\"password\": \"87951\",\r\n\t\"addresses\": [\r\n\t\t{\r\n\t\t\t\"addressType\": \"Permanent\",\r\n\t\t\t\"flatNumber\": \"101\",\r\n\t\t\t\"plotNumber\": \"102\",\r\n\t\t\t\"buildingName\": \"31\",\r\n\t\t\t\"roadNumber\": 124578,\r\n\t\t\t\"street\": \"ss\",\r\n\t\t\t\"city\": \"Telangana\",\r\n\t\t\t\"country\": \"India\",\r\n\t\t\t\"pinCode\": 500036\r\n\t\t}    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:1001/customer-service/customer/updateCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1001",
+							"path": [
+								"customer-service",
+								"customer",
+								"updateCustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "addCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerId\": \"12345678\",\r\n\t\"customerName\": \"SonuNigum\",\r\n\t\"customerDOB\": \"2015-01-09\",\r\n\t\"phoneNumber\": 1234567899,\r\n\t\"email\": \"s.s@gmail.com\",\r\n\t\"password\": \"12345678\",\r\n\t\"addresses\": [\r\n\t\t{\r\n\t\t\t\"addressType\": \"Permanent\",\r\n\t\t\t\"flatNumber\": \"101\",\r\n\t\t\t\"plotNumber\": \"102\",\r\n\t\t\t\"buildingName\": \"31\",\r\n\t\t\t\"roadNumber\": 124578,\r\n\t\t\t\"street\": \"ss\",\r\n\t\t\t\"city\": \"Telangana\",\r\n\t\t\t\"country\": \"India\",\r\n\t\t\t\"pinCode\": 500036\r\n\t\t}    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1001/customer-service/customer/addCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"customer-service",
+						"customer",
+						"addCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/customer-service/customer/getCustomer/12345678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"customer-service",
+						"customer",
+						"getCustomer",
+						"12345678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCustomers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "rafi",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/customer-service/customer/getAllCustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"customer-service",
+						"customer",
+						"getAllCustomers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "rafi",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerId\": \"12345678\",\r\n\t\"customerName\": \"SonuNigum\",\r\n\t\"customerDOB\": \"2015-01-09\",\r\n\t\"phoneNumber\": 1234567899,\r\n\t\"email\": \"s.s@gmail.com\",\r\n\t\"password\": \"87951\",\r\n\t\"addresses\": [\r\n\t\t{\r\n\t\t\t\"addressType\": \"Permanent\",\r\n\t\t\t\"flatNumber\": \"101\",\r\n\t\t\t\"plotNumber\": \"102\",\r\n\t\t\t\"buildingName\": \"31\",\r\n\t\t\t\"roadNumber\": 124578,\r\n\t\t\t\"street\": \"ss\",\r\n\t\t\t\"city\": \"Telangana\",\r\n\t\t\t\"country\": \"India\",\r\n\t\t\t\"pinCode\": 500036\r\n\t\t}    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1001/customer-service/customer/updateCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"customer-service",
+						"customer",
+						"updateCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1001/customer-service/customer/deleteCustomer/12345678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"customer-service",
+						"customer",
+						"deleteCustomer",
+						"12345678"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
